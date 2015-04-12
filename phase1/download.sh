@@ -1,5 +1,5 @@
 #!/bin/sh
-source paths.sh
+. ./paths.sh
 CURR_DIR=$PWD
 mkdir $VPM_IMAGES_DIR
 cd $VPM_DOWNLOAD_DIR

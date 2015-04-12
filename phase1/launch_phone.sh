@@ -1,3 +1,3 @@
 #!/bin/sh
-source paths.sh
-$ANDROID_EMU_DIR/emulator -avd phone
+. ./paths.sh
+$ANDROID_EMU_DIR/emulator -avd phone -netspeed full -netdelay none
