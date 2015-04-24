@@ -10,29 +10,25 @@ Steps to perform Phase 1 (in Terminal Window):
 2) Download necessary images and files.
 Run: ./download.sh
 
-3) Open new terminal window and launch sensor QEMU
-Run: ./launch_sensor.sh
+3) Launch all VMs
+Run: ./launch_all.sh
+Internally, this runs the following:
+	i) Launch sensor QEMU (./launch_sensor.sh)
+	ii) Launch Android emulator (./launch_phone.sh)
+	iii) Launch server QEMU (./launch_server.sh)
+	iv) Launch watcher (./start_watcher.sh)
 
-4) Open new terminal window and launch Android emulator
-Run: ./launch_phone.sh
-
-5) Open new terminal window and launch server QEMU
-Run: ./launch_server.sh
-
-6) Open new terminal window
-Run: ./start_watcher.sh
-
-7) Once the Android emulator is up and running
+4) Once the Android emulator is up and running
 Edit ssh.txt and enter the username and password of your host machine
 1st line is username.
 2nd line is password.
 Make sure you don't press enter after the 2nd line.
 
-8) In terminal window
+5) In terminal window
 Run: ./send_ssh_creds.sh
 This will transfer the ssh.txt file to the Android device so that our application can access it.
 
-7) Blog
+6) Blog
 Open Lifelogs application in Android Emulator, Hit Blog Button
 This will perform the following steps - 
 (i) Send test.wav from host to sensor
@@ -40,7 +36,7 @@ This will perform the following steps -
 (iii) Host will send the MP3 file to Android and the server. At this time, the Android application will update itself with the location and audio file. Tap on the marker to interact with it. 
 (iv) Host will then retrieve the tags from server and send it to Android. At this time, hitting "Auto-Tag?" in the application will display the tags
 
-8) Search
+7) Search
 Open Lifelogs application in Android Emulator, Hit Search Button and enter keyword
 This will perform the following steps - 
 (i) Get keyword file from Android to host
