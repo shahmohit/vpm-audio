@@ -43,3 +43,6 @@ This will perform the following steps -
 (ii) Send keyword file to server
 (iii) Retrieve relevant metadata from server to host
 (iv) Send metadata from host to Android
+
+8) To kill all the VMs and associated processes:
+Open terminal window and run: ./terminate_vm.sh
